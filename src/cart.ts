@@ -11,14 +11,14 @@ export default class Cart {
     return [...this._items];
   }
 
-  sum(): number {
+  calculationSum(): number {
     let sum: number = 0;
     
     this._items.forEach(item => sum += item.price);
     return sum;
   }
 
-  discountedAmount(discount: number): number {
+  calculationDiscountedAmount(discount: number): number {
     let sum: number = 0;
 
     this._items.forEach(item => sum += item.price);
