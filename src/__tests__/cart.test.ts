@@ -51,7 +51,7 @@ test.each([
   cart.add(avengers);
   cart.add(drive);
 
-  expect(cart.sum()).toBe(expected);
+  expect(cart.calculationSum()).toBe(expected);
 });
 
 test.each([
@@ -66,7 +66,7 @@ test.each([
   cart.add(avengers);
   cart.add(drive);
 
-  expect(cart.discountedAmount(discount)).toBe(expected);
+  expect(cart.calculationDiscountedAmount(discount)).toBe(expected);
 });
 
 test.each([
