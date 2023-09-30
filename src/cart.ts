@@ -19,20 +19,13 @@ export default class Cart {
   }
 
   calculationDiscountedAmount(discount: number): number {
-    let sum: number = 0;
-
-    this._items.forEach(item => sum += item.price);
-
+    let sum: number = this.calculationSum();
     discount = discount / 100;
     sum = sum * (1 - discount);
     return sum;
   }
 
   remove(id: number): void {
-    this._items.forEach((item, index) => {
-      if (item.id === id) {
-        this._items.splice(index, 1);
-      }
-    });
+    this._items = this._items.filter(item => item.id !== id);
   }
 }
